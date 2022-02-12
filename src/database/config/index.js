@@ -30,8 +30,9 @@ db.todoList.hasMany(db.todo, {
     as: 'todos',
 });
 
-db.todo.hasOne(db.todoList, {
-    foreignKey: 'todo_List_id'
+db.todo.belongsTo(db.todoList, {
+    foreignKey: 'todoListId',
+    as: 'todos',
 });
 
 

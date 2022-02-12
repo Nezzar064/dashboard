@@ -7,11 +7,9 @@ const moduleName = 'orders.repository.js -';
 exports.create = async (item) => {
     return await Item.create({
         name: item.name,
-        SKU: item.SKU,
-        brand: item.brand,
+        brand: item.link,
         description: item.description,
         price: item.price,
-        stock: item.stock,
         category: item.category,
     })
     .then((item) => {
@@ -45,11 +43,9 @@ exports.findAll = async () => {
 exports.update = async (id, item) => {
     return await Item.update({
         name: item.name,
-        SKU: item.SKU,
-        brand: item.brand,
+        brand: item.link,
         description: item.description,
         price: item.price,
-        stock: item.stock,
         category: item.category,
     }, {
         where: {
