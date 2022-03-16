@@ -1,15 +1,15 @@
-const repository = require('../repository/item.repository');
+const repository = require('../repository/todo.repository');
 
-const create = async (item) => {
-    return await repository.create(item);
+const create = async (todo) => {
+    return await repository.create(todo);
 };
 
 const findAll = async () => {
     return await repository.findAll();
 };
 
-const update = async (id, item) => {
-    return await repository.update(id, item);
+const update = async (id, todo) => {
+    return await repository.update(id, todo);
 };
 
 const findById = async (id) => {
